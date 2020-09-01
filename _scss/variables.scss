@@ -1,0 +1,30 @@
+//  Colors and other style variables
+
+$color-text: #1C1821;
+$color-text-75: #555259;
+$color-text-50: #8D8B90;
+$color-white: #FFFFFF;
+$color-pink: #F01A66;
+$color-cream: #FFF3F1;
+$color-coral: #FE8876;
+$color-lavender: #EADFF8;
+$color-yellow: #F9DD42;
+$color-teal: #1791BD;
+
+// media queries & breakpoints
+// Media-Query Mixin
+@mixin media-query($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+$size-xs: 480px;
+$size-s: 640px;
+$size-m: 960px;
+$size-l: 1280px;
+$size-xl: 1440px;
+$size-xxl: 1920px;
+
+$transition-timing-function: ease-in-out;
+$transition-duration: .15s;

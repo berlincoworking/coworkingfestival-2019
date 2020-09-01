@@ -1,0 +1,32 @@
+.tours-header {
+  overflow: hidden;
+}
+
+.tours-header-copy {
+  @include media-query($size-m) {
+    float: left;
+  }
+}
+
+.tours-header-map {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 4rem;
+  @include media-query($size-m) {
+    float: right;
+  }
+}
+
+.tour {
+
+}
+
+.tour__list {
+  list-style: none;
+  padding-left: 0;
+  span {
+    display: inline-block;
+    font-weight: bold;
+    min-width: 8rem;
+  }
+}

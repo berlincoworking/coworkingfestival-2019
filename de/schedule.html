@@ -1,0 +1,92 @@
+---
+layout: default-de
+title: Veranstaltungskalender
+lang: de_DE
+description: 'Quer durch Berlin finden Events statt rund um Technologie, Marketing, Business, Community-Building, und vielem mehr. Ganz egal, ob Du Workshops besuchen willst, Dich mit Betreibern von Coworking Spaces austauschen willst, oder einfach nur mit gleichgesinnten Coworkern quatschen willst: Hier wirst Du fündig.'
+---
+
+<div class="container">
+  <div class="section section--64 mb6">
+    <h1>{{ page.title }}</h1>
+    <p class="text-huge">
+      {{ page.description }}
+    </p>
+    <div class="flex items-center flex-wrap justify-end">
+      <p class="pr4 tr">
+        Dein Space oder Event sollte hier auch stehen?
+      </p>
+      <p>
+        <a class="btn btn--border-with-shadow" href="/de/contact">
+          Kontaktiere uns
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+{% assign sorted = site.data.events | sort: 'start_datetime' %}
+
+<div class="events-day">
+  <div class="container">
+    <div class="section section--64 mb5">
+      <h2>Montag, 9. September</h2>
+      {% for event in sorted %}
+        {% if event.weekday == "Monday" %}
+          {% include event-de.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="events-day">
+  <div class="container">
+    <div class="section section--64 mb5">
+      <h2>Dienstag, 10. September</h2>
+      {% for event in sorted %}
+        {% if event.weekday == "Tuesday" %}
+          {% include event-de.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="events-day">
+  <div class="container">
+    <div class="section section--64 mb5">
+      <h2>Mittwoch, 11. September</h2>
+      {% for event in sorted %}
+        {% if event.weekday == "Wednesday" %}
+          {% include event-de.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="events-day">
+  <div class="container">
+    <div class="section section--64 mb5">
+      <h2>Donnerstag, 12. September</h2>
+      {% for event in sorted %}
+        {% if event.weekday == "Thursday" %}
+          {% include event-de.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="events-day">
+  <div class="container">
+    <div class="section section--64 mb5">
+      <h2>Freitag, 13. September</h2>
+      {% for event in sorted %}
+        {% if event.weekday == "Friday" %}
+          {% include event-de.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

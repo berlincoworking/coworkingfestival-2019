@@ -1,0 +1,59 @@
+<!-- Google Analytics -->
+<script>
+  window.ga = function() {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-105304166-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+<link rel="stylesheet" type="text/css"
+  href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function () {
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#ffffff",
+          "text": "#1c1821"
+        },
+        "button": {
+          "background": "#f9dd42"
+        }
+      },
+      "theme": "edgeless",
+      "content": {
+        "message": "We use cookies to measure usage and deliver advertising for this page.",
+        "href": "https://coworkingfestival.com/impressum.html"
+      }
+    })
+  });
+</script>
+
+<script>
+  const button = document.querySelector("#menu-toggle");
+  const menu = document.querySelector("#menu");
+  const body = document.querySelector(".site-body");
+
+  button.addEventListener("click", function(){
+    menu.classList.toggle("menu--active");
+    body.classList.toggle("site-body--menu-open");
+    button.classList.toggle("menu-toggle--active").blur();
+  });
+</script>
+
+<script>
+  const events = document.querySelectorAll(".event");
+  events.forEach(function(event) {
+    var eventButton = event.querySelector(".event-toggle");
+    var eventDetails = event.querySelector(".event__further-info");
+    eventButton.addEventListener("click", function(){
+      eventDetails.classList.toggle("event__further-info--is-hidden");
+    });
+  });
+</script>
